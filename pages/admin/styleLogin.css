@@ -1,0 +1,296 @@
+/* Variables personalizables */
+:root {
+    --bg-image: url('../uploads/sys/students.jpg');
+    --overlay-color: rgba(0, 56, 119, 0.6);
+    --primary-color: rgba(0, 123, 255, 0.56);
+    --error-color: rgba(220, 53, 69, 0.8);
+}
+
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-image) no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+    z-index: -1;
+}
+
+/* Contenedor del formulario - Efecto Cristal */
+.login-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+    color: white;
+    z-index: 1;
+    margin: 20px;
+}
+
+/* Texto descriptivo */
+.login-description {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-description h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.login-description p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título del formulario */
+.login-container h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h1 i {
+    margin-right: 10px;
+}
+
+/* Mensaje de error */
+.error {
+    color: #ff9e9e;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    background: rgba(220, 53, 69, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #dc3545;
+}
+
+.error i {
+    margin-right: 8px;
+}
+
+/* Mensaje de no hay urnas activas */
+.no-urna-activa {
+    color: #ff9e9e;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    background: rgba(220, 53, 69, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #dc3545;
+}
+
+.no-urna-activa i {
+    margin-right: 8px;
+}
+
+/* Botón de cerrar sesión */
+.btn-logout {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--error-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.btn-logout:hover {
+    background-color: rgba(200, 35, 51, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(200, 35, 51, 0.4);
+}
+
+.btn-logout i {
+    margin-right: 8px;
+}
+
+/* Campos del formulario */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group label i {
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus {
+    border-color: rgba(255, 255, 255, 0.8);
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+/* Botón de inicio de sesión */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-login:hover {
+    background: rgba(0, 86, 179, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 86, 179, 0.4);
+}
+
+.btn-login i {
+    margin-right: 8px;
+}
+
+/* Efectos decorativos */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(255, 255, 255, 0.1) 100%
+    );
+    transform: rotate(30deg);
+    z-index: -1;
+    animation: shine 8s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(30deg) translate(-30%, -30%);
+    }
+    100% {
+        transform: rotate(30deg) translate(30%, 30%);
+    }
+}
+
+/* Efecto de partículas */
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: float linear infinite;
+    z-index: -1;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+    
+    .login-container h1 {
+        font-size: 1.8rem;
+    }
+    
+    .login-description h2 {
+        font-size: 1.5rem;
+    }
+    
+    .login-description p {
+        font-size: 0.9rem;
+    }
+}

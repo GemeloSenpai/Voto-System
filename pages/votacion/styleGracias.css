@@ -1,0 +1,72 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #007bff; /* Fondo azul */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    color: #007bff; /* Texto azul */
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+p {
+    color: #333; /* Texto gris oscuro */
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el botón "Regresar a Urnas" */
+.btn-urnas {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #28a745; /* Verde */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.btn-urnas:disabled {
+    background-color: #6c757d; /* Gris */
+    cursor: not-allowed;
+}
+
+.btn-urnas:hover:not(:disabled) {
+    background-color: #218838; /* Verde más oscuro */
+    transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

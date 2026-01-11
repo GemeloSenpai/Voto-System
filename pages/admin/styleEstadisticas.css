@@ -1,0 +1,166 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto 30px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+h1 i {
+    font-size: 1.8rem;
+    color: #007bff;
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+}
+
+.filtros label {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.filtros select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Cuadrícula de jornadas - MODIFICADO PARA COLUMNA */
+.jornadas-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.jornada-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.jornada-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.jornada-header h2 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.4rem;
+}
+
+.jornada-header i {
+    font-size: 1.4rem;
+    color: #007bff;
+}
+
+/* Niveles educativos */
+.niveles-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.nivel-card {
+    flex: 1;
+    min-width: 0;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.nivel-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #4a5568;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nivel-card h3 i {
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+/* Gráficos */
+.grafico-container {
+    width: 100%;
+    min-height: 250px;
+    margin-bottom: 15px;
+}
+
+.votos-blanco {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #718096;
+    padding: 8px;
+    background-color: #f7fafc;
+    border-radius: 6px;
+}
+
+.votos-blanco strong {
+    color: #2d3748;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .niveles-container {
+        flex-direction: column;
+    }
+    
+    .nivel-card {
+        width: 100%;
+    }
+    
+    .container {
+        margin-top: 50px;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+}

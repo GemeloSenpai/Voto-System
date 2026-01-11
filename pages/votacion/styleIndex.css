@@ -1,0 +1,194 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%; /* Ancho relativo */
+    max-width: 1200px; /* Ancho máximo */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    margin: 0px; /* Margen para evitar que toque los bordes */
+    overflow: hidden; /* Evitar desbordamientos */
+}
+
+form{
+    margin-top: 0px;
+    padding: 0px;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 0px; 
+    margin-top: 0px;/* Espaciado inferior */
+    font-size: 2rem; /* Tamaño de fuente reducido */
+}
+
+/* Contenedor de papeletas */
+.papeletas-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espacio entre papeletas */
+    margin-top: 10px;
+}
+
+.papeleta, .voto-blanco {
+    flex: 1; /* Todas las papeletas ocupan el mismo espacio */
+    min-width: 250px; /* Ancho mínimo para evitar que se reduzca demasiado */
+    max-width: 300px; /* Ancho máximo */
+    padding: 20px; /* Padding interno */
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box; /* Asegurar que el padding no afecte el ancho */
+}
+
+/* Ajustes específicos para la papeleta de voto en blanco */
+.voto-blanco {
+    min-width: 250px; /* Mismo ancho mínimo que las demás */
+    max-width: 300px; /* Mismo ancho máximo que las demás */
+
+}
+
+.voto-blanco img{
+    margin-top:105px;
+}
+
+/* Efecto hover para todas las papeletas */
+.papeleta:hover, .voto-blanco:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.papeleta h2, .voto-blanco h2{
+    margin-bottom: 0px;
+}
+
+
+.papeleta h2, .voto-blanco h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 1.5rem; /* Tamaño de fuente reducido */
+}
+
+
+/* Estilos para el logo de la planilla */
+.papeleta img[alt="Logo de la planilla"] {
+    width: 120px; /* Tamaño del logo */
+    height: 120px;
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 0 auto 15px; /* Centrar horizontalmente y margen inferior */
+    border: 3px solid #007bff; /* Borde azul */
+    object-fit: cover; /* Asegurar que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Estilos para la foto del candidato (clase img-candidato) */
+.img-candidato {
+    width: 180px; /* Tamaño más grande que el logo */
+    height: 180px;
+    border-radius: 10px; /* Bordes redondeados (no circular) */
+    margin: 0 auto 15px; /* Centrar horizontalmente y margen inferior */
+    border: 3px solid #007bff; /* Borde azul */
+    object-fit: cover; /* Asegurar que la imagen cubra el espacio sin distorsionarse */
+}
+.papeleta p, .voto-blanco p {
+    color: #555;
+    font-size: 1rem; /* Tamaño de fuente reducido */
+    margin-bottom: 15px;
+}
+
+/* Botón "Votar" */
+.btn-votar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem; /* Tamaño de fuente reducido */
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: auto;
+}
+
+.btn-votar:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Botón "Regresar al Panel" */
+.btn-panel {
+    display: none; /* Ocultar inicialmente */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+.btn-panel.visible {
+    display: inline-block; /* Mostrar cuando sea necesario */
+}
+
+.btn-panel:hover {
+    background-color: #0056b3;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* nuevo */
+.grupo-radios {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.grupo-radios fieldset {
+    border: none;
+    margin: 10px 0;
+}
+
+.grupo-radios legend {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.grupo-radios label {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.grupo-radios input[type="radio"] {
+    margin-right: 10px;
+}
+
